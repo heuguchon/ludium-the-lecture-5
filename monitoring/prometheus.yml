@@ -12,3 +12,9 @@ scrape_configs:
     relabel_configs:
       - target_label: instance
         replacement: node-exporter
+  - job_name: 'evm'
+    static_configs:
+      - targets: ['localhost:9368']
+    relabel_configs:
+      - target_label: instance
+        replacement: 'node-evm'
