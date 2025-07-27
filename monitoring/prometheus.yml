@@ -1,0 +1,6 @@
+global:
+  scrape_interval: 15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds.
+
+rule_files:
+  - 'prometheus.rules.yml'
