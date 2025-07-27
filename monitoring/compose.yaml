@@ -48,3 +48,10 @@ services:
       - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
     ports:
       - 9100:9100
+
+  ethereum_exporter:
+    image: 31z4/ethereum-prometheus-exporter
+    network_mode: host
+    restart: unless-stopped
+    command:
+      - '-url=http://localhost:8545'
